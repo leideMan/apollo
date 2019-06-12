@@ -1,20 +1,26 @@
 @echo off
 
 rem apollo config db info
-set apollo_config_db_url="jdbc:mysql://localhost:3306/ApolloConfigDB?characterEncoding=utf8"
-set apollo_config_db_username="root"
-set apollo_config_db_password=""
+set apollo_config_db_url="jdbc:mysql://mysql-s1.wd.net:3306/apollo_config?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false"
+set apollo_config_db_username="dev_user"
+set apollo_config_db_password="DBdev-jiarui"
+#set apollo_config_db_url="jdbc:mysql://192.168.100.181:3306/apollo_config?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false"
+#set apollo_config_db_username="dev_user"
+#set apollo_config_db_password="DBdev-jiarui"
 
 rem apollo portal db info
-set apollo_portal_db_url="jdbc:mysql://localhost:3306/ApolloPortalDB?characterEncoding=utf8"
-set apollo_portal_db_username="root"
-set apollo_portal_db_password=""
+#set apollo_portal_db_url="jdbc:mysql://mysql-s1.wd.net:3306/apollo_portal?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false"
+#set apollo_portal_db_username="dev_user"
+#set apollo_portal_db_password="DBdev-jiarui"
+
+set apollo_portal_db_url="jdbc:mysql://192.168.100.181:3306/apollo_portal?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false"
+set apollo_portal_db_username="dev_user"
+set apollo_portal_db_password="DBdev-jiarui"
 
 rem meta server url, different environments should have different meta server addresses
-set dev_meta="http://localhost:8080"
-set fat_meta="http://someIp:8080"
-set uat_meta="http://anotherIp:8080"
-set pro_meta="http://yetAnotherIp:8080"
+set dev_meta="http://192.168.100.21:9900"
+set fat_meta="http://192.168.100.200:9900"
+set pro_meta="http://47.95.242.151:9900"
 
 set META_SERVERS_OPTS=-Ddev_meta=%dev_meta% -Dfat_meta=%fat_meta% -Duat_meta=%uat_meta% -Dpro_meta=%pro_meta%
 
