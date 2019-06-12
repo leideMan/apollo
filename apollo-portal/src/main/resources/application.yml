@@ -10,14 +10,14 @@ spring:
           plan_cache_max_size: 192 # limit query plan cache max size
 
 server:
-  port: 8070
+  port: 9902
   compression:
     enabled: true
   tomcat:
     use-relative-redirects: true
 
 logging:
-  file: /opt/logs/100003173/apollo-portal.log
+  file: /logs/apollo/100003173/apollo-portal.log
 
 management:
   health:
